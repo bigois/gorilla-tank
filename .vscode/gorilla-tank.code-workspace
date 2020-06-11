@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "..",
+			"name": "sw-api"
+		}
+	],
+	"settings": {
+		"totvsLanguageServer.welcomePage": false,
+		"totvsLanguageServer.askCompileResult": false,
+		"totvsLanguageServer.askEncodingChange": false,
+		"[advpl]": {
+			"files.encoding": "windows1252"
+		},
+		"files.exclude": {
+			"**/.vscode": true,
+			"**.gitignore": true,
+			"**LICENSE": true,
+			"**.md": true
+		},
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"explorer.compactFolders": false,
+	"editor.renderWhitespace": "all",
+	"editor.insertSpaces": false
+	}
+}
