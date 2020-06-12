@@ -1,0 +1,31 @@
+#include "totvs.ch"
+
+class Pessoa
+	private data nome as char
+	private data idade as numeric
+
+	public method new(nome, idade) constructor
+	public method getNome()
+	public method setNome(nome)
+	public method getIdade()
+	public method setIdade(idade)
+endclass
+
+method new(nome, idade) class pessoa
+	self:nome := nome
+	self:idade := idade
+return self
+
+method getNome() class Pessoa
+return self:nome
+
+method setNome(nome) class Pessoa
+	self:nome := nome
+return nil
+
+method getIdade() class Pessoa
+return self:idade
+
+method setIdade(idade) class Pessoa
+	self:idade := idade
+return nil
