@@ -1,19 +1,59 @@
 #include "totvs.ch"
 
 class Pessoa
-	private data nome as char
-	private data idade as numeric
+	private data nome as character
+	private data altura as numeric
+	private data peso as numeric
+	private data cabelo as character
+	private data olhos as character
+	private data nascimento as character
+	private data genero as character
+	private data origem as character
+	private data filmes as object
+	private data especies as object
+	private data veiculos as object
+	private data aeronaves as object 
 
-	public method new(nome, idade) constructor
+	public method new(nome, altura, peso, cabelo, olhos, nascimento, genero, origem, filmes, especies, veiculos, aeronaves) constructor
 	public method getNome()
 	public method setNome(nome)
-	public method getIdade()
-	public method setIdade(idade)
+	public method getAltura()
+	public method setAltura(altura)
+	public method getPeso()
+	public method setPeso(peso)
+	public method getCabelo()
+	public method setCabelo(cabelo)
+	public method getOlhos()
+	public method setOlhos(olhos)
+	public method getNascimento()
+	public method setNascimento(nascimento)
+	public method getGenero()
+	public method setGenero(genero)
+	public method getOrigem()
+	public method setOrigem(origem)
+	public method getFilmes()
+	public method setFilmes(filmes)
+	public method getEspecies()
+	public method setEspecies(especies)
+	public method getVeiculos()
+	public method setVeiculos(veiculos)
+	public method getAeronaves()
+	public method setAeronaves(aeronaves)
 endclass
 
-method new(nome, idade) class pessoa
+method new(nome, altura, peso, cabelo, olhos, nascimento, genero, origem, filmes, especies, veiculos, aeronaves) class pessoa
 	self:nome := nome
-	self:idade := idade
+	self:altura := altura
+	self:peso := peso
+	self:cabelo := cabelo
+	self:olhos := olhos
+	self:nascimento := nascimento
+	self:genero := genero
+	self:origem := origem
+	self:filmes := filmes
+	self:especies := especies
+	self:veiculos := veiculos
+	self:aeronaves := aeronaves
 return self
 
 method getNome() class Pessoa
@@ -23,9 +63,79 @@ method setNome(nome) class Pessoa
 	self:nome := nome
 return nil
 
-method getIdade() class Pessoa
-return self:idade
+method getAltura() class Pessoa
+return self:altura
 
-method setIdade(idade) class Pessoa
-	self:idade := idade
+method setAltura(altura) class Pessoa
+	self:altura := altura
+return nil
+
+method getPeso() class Pessoa
+return self:peso
+
+method setPeso(peso) class Pessoa
+	self:peso := peso
+return nil
+
+method getCabelo() class Pessoa
+return self:cabelo
+
+method setCabelo(cabelo) class Pessoa
+	self:cabelo := cabelo
+return nil
+
+method getOlhos() class Pessoa
+return self:olhos
+
+method setOlhos(olhos) class Pessoa
+	self:olhos := olhos
+return nil
+
+method getNascimento() class Pessoa
+return self:nascimento
+
+method setNascimento(nascimento) class Pessoa
+	self:nascimento := nascimento
+return nil
+
+method getGenero() class Pessoa
+return self:genero
+
+method setGenero(genero) class Pessoa
+	self:genero := genero
+return nil
+
+method getOrigem() class Pessoa
+return self:origem
+
+method setOrigem(origem) class Pessoa
+	self:origem := origem
+return nil
+
+method getFilmes() class Pessoa
+return self:filmes
+
+method setFilmes(filmes) class Pessoa
+	self:filmes := filmes
+return nil
+
+method getEspecies() class Pessoa
+return self:especies
+
+method setEspecies(especies) class Pessoa
+	self:especies := especies
+return nil
+
+method getVeiculos() class Pessoa
+return self:veiculos
+
+method setVeiculos(veiculos) class Pessoa
+	self:veiculos := veiculos
+return nil
+
+method getAeronaves() class Pessoa
+return self:aeronaves
+
+method setAeronaves(aeronaves) class Pessoa
+	self:aeronaves := aeronaves
 return nil
