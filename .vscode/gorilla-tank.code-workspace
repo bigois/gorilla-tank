@@ -18,10 +18,10 @@
 			"**LICENSE": true,
 			"**.md": true
 		},
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"explorer.compactFolders": false,
-	"editor.renderWhitespace": "all",
-	"editor.insertSpaces": false
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+		"explorer.compactFolders": false,
+		"editor.renderWhitespace": "all",
+		"editor.insertSpaces": false
 	}
 }
