@@ -22,6 +22,8 @@
 		"files.trimFinalNewlines": true,
 		"explorer.compactFolders": false,
 		"editor.renderWhitespace": "all",
-		"editor.insertSpaces": false
+		"editor.insertSpaces": false,
+		"protheusDoc.versao_default": "12.1.25",
+		"protheusDoc.pasta_doc": "docs\\protheusdoc"
 	}
 }
