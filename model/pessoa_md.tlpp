@@ -1,31 +1,372 @@
 #include "totvs.ch"
 
+/*/{Protheus.doc} Pessoa
+	Personagens da saga Star Wars retornados por meio da API https://swapi.dev/api/people/{id}
+	@type class
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+/*/
 class Pessoa
-	private data nome as char
-	private data idade as numeric
+	private data nome as character
+	private data altura as numeric
+	private data peso as numeric
+	private data cabelo as character
+	private data olhos as character
+	private data nascimento as character
+	private data genero as character
+	private data origem as character
+	private data filmes as object
+	private data especies as object
+	private data veiculos as object
+	private data aeronaves as object 
 
-	public method new(nome, idade) constructor
+	public method new(nome, altura, peso, cabelo, olhos, nascimento, genero, origem, filmes, especies, veiculos, aeronaves) constructor
 	public method getNome()
 	public method setNome(nome)
-	public method getIdade()
-	public method setIdade(idade)
+	public method getAltura()
+	public method setAltura(altura)
+	public method getPeso()
+	public method setPeso(peso)
+	public method getCabelo()
+	public method setCabelo(cabelo)
+	public method getOlhos()
+	public method setOlhos(olhos)
+	public method getNascimento()
+	public method setNascimento(nascimento)
+	public method getGenero()
+	public method setGenero(genero)
+	public method getOrigem()
+	public method setOrigem(origem)
+	public method getFilmes()
+	public method setFilmes(filmes)
+	public method getEspecies()
+	public method setEspecies(especies)
+	public method getVeiculos()
+	public method setVeiculos(veiculos)
+	public method getAeronaves()
+	public method setAeronaves(aeronaves)
 endclass
 
-method new(nome, idade) class pessoa
+/*/{Protheus.doc} pessoa::new
+	Cria um objeto Pessoa em branco ou com os parâmetros informados pelo usuário
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param nome, character, Nome
+	@param altura, numeric, Altura
+	@param peso, numeric, Peso em quilogramas
+	@param cabelo, character, Cor do cabelo
+	@param olhos, object, Cor dos olhos
+	@param nascimento, numeric, Data de nascimento/criação conforme Calendário Galático
+	@param genero, character, Gênero da personagem
+	@param origem, character, Planeta/nação de origem
+	@param filmes, object, Filmes aos quais a personagem participou
+	@param especies, object, Espécies as quais a personagem pertence
+	@param veiculos, object, Veículos dirigidos ou de posse da personagem
+	@param aeronaves, object, Aeronaves pilotadas ou de posse da personagem
+	@return object, Objeto Pessoa
+/*/
+method new(nome, altura, peso, cabelo, olhos, nascimento, genero, origem, filmes, especies, veiculos, aeronaves) class pessoa
 	self:nome := nome
-	self:idade := idade
+	self:altura := altura
+	self:peso := peso
+	self:cabelo := cabelo
+	self:olhos := olhos
+	self:nascimento := nascimento
+	self:genero := genero
+	self:origem := origem
+	self:filmes := filmes
+	self:especies := especies
+	self:veiculos := veiculos
+	self:aeronaves := aeronaves
 return self
 
+/*/{Protheus.doc} Pessoa::getNome
+	Retorna o nome da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Nome da personagem
+/*/
 method getNome() class Pessoa
 return self:nome
 
+/*/{Protheus.doc} Pessoa::setNome
+	Altera o nome da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param nome, character, Novo nome da personagem
+	@return null, Retorno nulo
+/*/
 method setNome(nome) class Pessoa
 	self:nome := nome
 return nil
 
-method getIdade() class Pessoa
-return self:idade
+/*/{Protheus.doc} Pessoa::getAltura
+	Retorna a altura da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return numeric, Altura da personagem
+/*/
+method getAltura() class Pessoa
+return self:altura
 
-method setIdade(idade) class Pessoa
-	self:idade := idade
+/*/{Protheus.doc} Pessoa::setAltura
+	Altera a altura da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param altura, numeric, Nova altura da personagem
+	@return null, Retorno nulo
+/*/
+method setAltura(altura) class Pessoa
+	self:altura := altura
+return nil
+
+/*/{Protheus.doc} Pessoa::getPeso
+	Retorna o peso da personagem em quilogramas
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return numeric, Peso da personagem em quilogramas
+/*/
+method getPeso() class Pessoa
+return self:peso
+
+/*/{Protheus.doc} Pessoa::setPeso
+	Altera o peso da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param peso, numeric, Novo peso em quilogramas da personagem
+	@return null, Retorno nulo
+/*/
+method setPeso(peso) class Pessoa
+	self:peso := peso
+return nil
+
+/*/{Protheus.doc} Pessoa::getCabelo
+	Retorna a cor do cabelo da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Cor do cabelo da personagem
+/*/
+method getCabelo() class Pessoa
+return self:cabelo
+
+/*/{Protheus.doc} Pessoa::setCabelo
+	Altera a cor do cabelo da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param cabelo, character, Nova cor do cabelo da personagem
+	@return null, Retorno nulo
+/*/
+method setCabelo(cabelo) class Pessoa
+	self:cabelo := cabelo
+return nil
+
+/*/{Protheus.doc} Pessoa::getOlhos
+	Retorna a cor dos olhos da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Cor dos olhos da personagem
+/*/
+method getOlhos() class Pessoa
+return self:olhos
+
+/*/{Protheus.doc} Pessoa::setOlhos
+	Altera a cor dos olhos da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param olhos, character, Nova cor dos olhos da personagem
+	@return null, Retorno nulo
+/*/
+method setOlhos(olhos) class Pessoa
+	self:olhos := olhos
+return nil
+
+/*/{Protheus.doc} Pessoa::getNascimento
+	Retorna a data de nascimento/criação conforme Calendário Galático
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Data de nascimento conforme Calendário Galático
+/*/
+method getNascimento() class Pessoa
+return self:nascimento
+
+/*/{Protheus.doc} Pessoa::setNascimento
+	Altera a data de nascimento/criação da personagem conforme Calendário Galático
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param nascimento, character, Nova data de nascimento/criação conforme Calendário Galático
+	@return null, Retorno nulo
+/*/
+method setNascimento(nascimento) class Pessoa
+	self:nascimento := nascimento
+return nil
+
+/*/{Protheus.doc} Pessoa::getGenero
+	Retorna o gênero da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Gênero da personagem
+/*/
+method getGenero() class Pessoa
+return self:genero
+
+/*/{Protheus.doc} Pessoa::setGenero
+	Altera o gênero da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param genero, character, Novo gênero da personagem
+	@return null, Retorno nulo
+/*/
+method setGenero(genero) class Pessoa
+	self:genero := genero
+return nil
+
+/*/{Protheus.doc} Pessoa::getOrigem
+	Retorna o planeta/nação de origem da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return character, Planeta/nação de origem da personagem
+/*/
+method getOrigem() class Pessoa
+return self:origem
+
+/*/{Protheus.doc} Pessoa::setOrigem
+	Altera o planeta/nação de origem da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param origem, chracter, Novo planeta/nação de origem da personagem
+	@return null, Retorno nulo
+/*/
+method setOrigem(origem) class Pessoa
+	self:origem := origem
+return nil
+
+/*/{Protheus.doc} Pessoa::getFilmes
+	Retorna os filmes aos quais a personagem participou
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return object, Objeto THashMap() contendo os filmes aos quais a personagem participou
+/*/
+method getFilmes() class Pessoa
+return self:filmes
+
+/*/{Protheus.doc} Pessoa::setFilmes
+	Altera os filmes aos quais a personagem participou
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param filmes, object, Novo objeto THashMap() contendo os filmes aos quais a personagem participou
+	@return null, Retorno nulo
+/*/
+method setFilmes(filmes) class Pessoa
+	self:filmes := filmes
+return nil
+
+/*/{Protheus.doc} Pessoa::getEspecies
+	Retorna as espécies as quais a personagem pertence
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return object, Objeto THashMap() contendo as espécies as quais a personagem pertence
+/*/
+method getEspecies() class Pessoa
+return self:especies
+
+/*/{Protheus.doc} Pessoa::setEspecies
+	Retorna as espécies as quais a personagem pertence
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param especies, object, Novo objeto THashMap() contendo as espécies as quais a personagem pertence
+	@return null, Retorno nulo
+/*/
+method setEspecies(especies) class Pessoa
+	self:especies := especies
+return nil
+
+/*/{Protheus.doc} Pessoa::getVeiculos
+	Retorna os veículos dirigidos ou de posse da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return object, Objeto THashMap() contendo os veículos dirigidos ou de posse da personagem
+/*/
+method getVeiculos() class Pessoa
+return self:veiculos
+
+/*/{Protheus.doc} Pessoa::setVeiculos
+	Altera os veículos dirigidos ou de posse da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param veiculos, object, Novo objeto THashMap() contendo os veículos dirigidos ou de posse da personagem
+	@return null, Retorno nulo
+/*/
+method setVeiculos(veiculos) class Pessoa
+	self:veiculos := veiculos
+return nil
+
+/*/{Protheus.doc} Pessoa::getAeronaves
+	Retorna as aeronaves pilotadas ou de posse da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@return object, Objeto THashMap() contendo as aeronaves pilotadas ou de posse da personagem
+/*/
+method getAeronaves() class Pessoa
+return self:aeronaves
+
+/*/{Protheus.doc} Pessoa::setAeronaves
+	Altera as aeronaves pilotadas ou de posse da personagem
+	@type method
+	@version 12.1.25
+	@author Guilherme Bigois
+	@since 16/06/2020
+	@param aeronaves, object, Novo objeto THashMap() contendo as aeronaves pilotadas ou de posse da personagem
+	@return null, Retorno nulo
+/*/
+method setAeronaves(aeronaves) class Pessoa
+	self:aeronaves := aeronaves
 return nil

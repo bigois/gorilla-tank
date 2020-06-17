@@ -18,10 +18,12 @@
 			"**LICENSE": true,
 			"**.md": true
 		},
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"explorer.compactFolders": false,
-	"editor.renderWhitespace": "all",
-	"editor.insertSpaces": false
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+		"explorer.compactFolders": false,
+		"editor.renderWhitespace": "all",
+		"editor.insertSpaces": false,
+		"protheusDoc.versao_default": "12.1.25",
+		"protheusDoc.pasta_doc": "docs\\protheusdoc"
 	}
 }
